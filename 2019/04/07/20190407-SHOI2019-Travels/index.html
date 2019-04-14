@@ -85,7 +85,7 @@
 <meta property="og:site_name" content="Acme&#39;s Blog">
 <meta property="og:description" content="Day 0清明节放假。上午打了点没用的板子，觉得一些偏的算法比如 Miller-Rabin 应该不会考，就没复习（Flag）。下午颓颓颓，晚上赶到旅馆，准备考试。 考前有点紧张，感觉 SH 最近 OI 人才辈出，他们都进步很快，我这个小菜鸡就显得有些落后了。不过还是尽自己最大的努力去考吧，没准运气好就进省队了？ 睡的很早，并且几乎一躺下去就睡着了。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-14T04:56:12.626Z">
+<meta property="og:updated_time" content="2019-04-14T05:04:42.783Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="「SHOI 2019」游记">
 <meta name="twitter:description" content="Day 0清明节放假。上午打了点没用的板子，觉得一些偏的算法比如 Miller-Rabin 应该不会考，就没复习（Flag）。下午颓颓颓，晚上赶到旅馆，准备考试。 考前有点紧张，感觉 SH 最近 OI 人才辈出，他们都进步很快，我这个小菜鸡就显得有些落后了。不过还是尽自己最大的努力去考吧，没准运气好就进省队了？ 睡的很早，并且几乎一躺下去就睡着了。">
@@ -387,7 +387,7 @@
 <h1 id="Day-1"><a href="#Day-1" class="headerlink" title="Day 1"></a>Day 1</h1><p>考试日。早上吃了很多东西，所以没带零食进考场。</p>
 <p>开题。先花 $30 \text{min}$ 大概看了一下三题。$\text{T}1$ 咋 $k$ 这么小？难道是超级钢琴？$\text{T}2$ 好像 $30$ 分暴力比较 Easy 啊？$\text{T}3$ 是「消失的题面」？出题人毒瘤！</p>
 <p>按照自己定的策略，先打了三题的暴力。$\text{T}1$ $60$，$\text{T}2$ $30$。$\text{T}3$ 怎么才算是暴力呢？把 <code>1</code> 开头的点都看了一下，<code>1?+</code> 和 <code>1wa_998244353</code> 的第二个点好难啊不会做，于是水了 $25$ 分走人了。</p>
-<p>打完暴力后，考试时间已经过半。看 $\text{T}1$，想了 $2 \text{min}$ 后发现这就是个超级钢琴 + 可持久化 Trie 啊！赶紧码码码，过了 $1\text{h}$ 后写完调完，和暴力拍了几组数据，觉得很稳。$\text{T}2$ 想了 $10$ min，看了一下部分分：SA + 线段树优化建图有 $80$ 分？？？考试只剩一个多小时了，有点不敢写，于是就扔了。</p>
+<p>打完暴力后，考试时间已经过半。看 $\text{T}1$，想了 $2 \text{min}$ 后发现这就是个超级钢琴 + 可持久化 Trie 啊！赶紧码码码，过了 $1\text{h}$ 后写完调完，和暴力拍了几组数据，觉得很稳。$\text{T}2$ 想了 $10 \text{min}$，看了一下部分分：SA + 线段树优化建图有 $80$ 分？？？考试只剩一个多小时了，有点不敢写，于是就扔了。</p>
 <p>最后的 $1\text{h}$ 检查 + 玩 $\text{T}3$，用 gedit 打开 $\text{T}3$ <code>8.out</code> 的时候，gedit 因为文件太大崩溃了。我可是用 gedit 写代码的啊！尝试手动 kill 掉 gedit 无果，于是重新启动了机器。之后 $\text{T}3$ 的 <code>.out</code> 文件都是用 Guide 打开的。<code>2_p</code>, <code>2_u</code>, <code>2_g</code> 都是啥啊？盯着 <code>2_p</code> 看了好久，把相邻两个 <code>p</code> 位置的差列了出来，诶为啥都是偶数啊？这个序列有啥规律啊？为啥越到后面越稀疏啊？想了好久，才发现这个序列是代表每个数是不是素数的…… woc 我没复习 Miller-Rabin 啊！于是打了线性筛水了 $4$ 分走人了。</p>
 <p>再看看 <code>2_p</code>，woc <code>p</code> 原来是 prime 啊？好端端的 OI 题咋变成首字母填空了啊？于是想 <code>u</code> 和 <code>g</code> 分别代表什么，考试结束也没想出来。</p>
 <p>估分 $100 + 30 + 29 = 159$，感觉要被其他选手虐爆了。</p>
