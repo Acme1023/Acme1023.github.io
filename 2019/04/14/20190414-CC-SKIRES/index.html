@@ -85,12 +85,13 @@
 <meta property="og:site_name" content="Acme&#39;s Blog">
 <meta property="og:description" content="题目大意「Codechef SKIRES」Ski Resort 给定 $n \times m$ 的网格图，每个格子有一个高度 $h_{i, j}$。给一个格子的高度增加 $x$ 需要花费 $x$ 的代价。你要调整某些格子的高度，使得不存在高度单调不下降的，从起点到终点的路径。求需要花费的最小代价。">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://i.loli.net/2019/04/11/5caf63fc3e2dd.png">
 <meta property="og:image" content="https://i.loli.net/2019/04/11/5caf63fc6c631.png">
-<meta property="og:updated_time" content="2019-04-14T01:58:17.408Z">
+<meta property="og:updated_time" content="2019-04-14T02:01:39.426Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="「Codechef SKIRES」Ski Resort（最小割）">
 <meta name="twitter:description" content="题目大意「Codechef SKIRES」Ski Resort 给定 $n \times m$ 的网格图，每个格子有一个高度 $h_{i, j}$。给一个格子的高度增加 $x$ 需要花费 $x$ 的代价。你要调整某些格子的高度，使得不存在高度单调不下降的，从起点到终点的路径。求需要花费的最小代价。">
-<meta name="twitter:image" content="https://i.loli.net/2019/04/11/5caf63fc6c631.png">
+<meta name="twitter:image" content="https://i.loli.net/2019/04/11/5caf63fc3e2dd.png">
 
 
 
@@ -376,8 +377,10 @@
 <p>给定 $n \times m$ 的网格图，每个格子有一个高度 $h_{i, j}$。给一个格子的高度增加 $x$ 需要花费 $x$ 的代价。你要调整某些格子的高度，使得不存在高度单调不下降的，从起点到终点的路径。求需要花费的最小代价。</p>
 <a id="more"></a>
 <h1 id="思路分析"><a href="#思路分析" class="headerlink" title="思路分析"></a>思路分析</h1><p>看到 “不存在……的路径” 就想到最小割建图。但是直接对于每对相邻的格子建图不可行，因为一个格子高度的增加可能同时影响到与之相邻的几个格子。也就是说，如果需要使格子 $x$ 的高度比格子 $y_1, y_2, \cdots, y_k$ 大，所需要的代价不是 $\sum_{i = 1}^{k} \text{cost}(x, y_i)$，而是 $\max_{i = 1}^{k} \text{cost}(x, y_i)$，其中 $\text{cost}(x, y)$ 表示格子 $x$ 要比格子 $y$ 高需要花费的代价，也就是 $\max\{0, h(y) - h(x) + 1\}$。</p>
-<p>所以，我们需要对于每个格子拆点，一起考虑它周围一圈的格子，然后建如下结构的图：</p>
-<p><img src="https://i.loli.net/2019/04/11/5caf63fc6c631.png" alt="图 1"></p>
+<p>所以，我们对于每个格子拆点，一起考虑它周围一圈的格子。例如对于下图中的格子：</p>
+<p><img src="https://i.loli.net/2019/04/11/5caf63fc3e2dd.png" alt="图 1"></p>
+<p>需要建如下结构的图：</p>
+<p><img src="https://i.loli.net/2019/04/11/5caf63fc6c631.png" alt="图 2"></p>
 <p>另外注意一些小细节：</p>
 <ul>
 <li>$-1$ 最好提前判掉，否则可能会引起不必要的麻烦。</li>
