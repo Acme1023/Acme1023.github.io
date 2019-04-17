@@ -77,18 +77,18 @@
 
 
 
-<meta name="description" content="题目大意「WF 2012」Chips Challenge（UVA 1104） 给定一个 $n \times n$ 的棋盘，有些格子已经放上了黑色或白色的棋子。要求你在剩下的格子中摆放棋子，满足条件：  第 $i$ 行的黑子个数等于第 $i$ 列的黑子个数。 每行的黑子个数不大于总黑子个数的 $\frac{A}{B}$。  求最多再放多少黑子。 $n \le 50$。">
+<meta name="description" content="题目大意「WF 2012」Chips Challenge（UVA 1104） 给定一个 $n \times n$ 的棋盘，有些格子已经放上了黑色或白色的棋子。要求你在剩下的格子中摆放棋子，满足条件：  第 $i$ 行的黑子个数等于第 $i$ 列的黑子个数。 每行的黑子个数不大于总黑子个数的 $\frac{A}{B}$。  求最多再放多少黑子。 数据范围：$n \le 50$。">
 <meta name="keywords" content="费用流">
 <meta property="og:type" content="article">
 <meta property="og:title" content="「WF 2012」Chips Challenge（费用流）">
 <meta property="og:url" content="http://yoursite.com/2019/04/17/20190417-WF2012-CHIPCHAL/index.html">
 <meta property="og:site_name" content="Acme&#39;s Blog">
-<meta property="og:description" content="题目大意「WF 2012」Chips Challenge（UVA 1104） 给定一个 $n \times n$ 的棋盘，有些格子已经放上了黑色或白色的棋子。要求你在剩下的格子中摆放棋子，满足条件：  第 $i$ 行的黑子个数等于第 $i$ 列的黑子个数。 每行的黑子个数不大于总黑子个数的 $\frac{A}{B}$。  求最多再放多少黑子。 $n \le 50$。">
+<meta property="og:description" content="题目大意「WF 2012」Chips Challenge（UVA 1104） 给定一个 $n \times n$ 的棋盘，有些格子已经放上了黑色或白色的棋子。要求你在剩下的格子中摆放棋子，满足条件：  第 $i$ 行的黑子个数等于第 $i$ 列的黑子个数。 每行的黑子个数不大于总黑子个数的 $\frac{A}{B}$。  求最多再放多少黑子。 数据范围：$n \le 50$。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-17T08:06:22.949Z">
+<meta property="og:updated_time" content="2019-04-17T08:39:55.526Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="「WF 2012」Chips Challenge（费用流）">
-<meta name="twitter:description" content="题目大意「WF 2012」Chips Challenge（UVA 1104） 给定一个 $n \times n$ 的棋盘，有些格子已经放上了黑色或白色的棋子。要求你在剩下的格子中摆放棋子，满足条件：  第 $i$ 行的黑子个数等于第 $i$ 列的黑子个数。 每行的黑子个数不大于总黑子个数的 $\frac{A}{B}$。  求最多再放多少黑子。 $n \le 50$。">
+<meta name="twitter:description" content="题目大意「WF 2012」Chips Challenge（UVA 1104） 给定一个 $n \times n$ 的棋盘，有些格子已经放上了黑色或白色的棋子。要求你在剩下的格子中摆放棋子，满足条件：  第 $i$ 行的黑子个数等于第 $i$ 列的黑子个数。 每行的黑子个数不大于总黑子个数的 $\frac{A}{B}$。  求最多再放多少黑子。 数据范围：$n \le 50$。">
 
 
 
@@ -159,7 +159,7 @@
       </a>
     </div>
       
-        <p class="site-subtitle">阿克米阿克！</p>
+        <p class="site-subtitle">少壮不努力，退役两行泪。</p>
       
   </div>
 
@@ -387,7 +387,7 @@
 <li>每行的黑子个数不大于总黑子个数的 $\frac{A}{B}$。</li>
 </ul>
 <p>求最多再放多少黑子。</p>
-<p>$n \le 50$。</p>
+<p>数据范围：$n \le 50$。</p>
 <a id="more"></a>
 <h1 id="思路分析"><a href="#思路分析" class="headerlink" title="思路分析"></a>思路分析</h1><p>枚举每行每列最多放 $k$ 枚黑子，这样第二个限制就变成了总黑子数量不能超过 $\frac{B \cdot k}{A}$。</p>
 <p>考虑建图：</p>
